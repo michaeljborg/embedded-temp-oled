@@ -21,7 +21,6 @@ This project focuses on creating a real-time temperature monitoring system using
    - Communication: SPI protocol
 3. Temperature Sensor (TBD)
    - Communication: I2C protocol
-4. Additional Supplies: Breadboard, wires, and connectors for prototyping.
 
 ## Software Components
 - Programming Language: C
@@ -45,7 +44,6 @@ real-time-temp-display/
 │   ├── spi_driver.h         # Header file for SPI driver
 │   ├── i2c_driver.h         # Header file for I2C driver
 ├── README.md
-├── LICENSE
 └── Makefile
 ```
 
