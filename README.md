@@ -1,7 +1,7 @@
 # Real-Time Temperature Display with Raspberry Pi 4
 
 ## Project Overview
-This project focuses on creating a real-time temperature monitoring system using a Raspberry Pi 4. The setup involves measuring ambient temperature with a sensor (using the I2C protocol) and displaying the readings on an SSD1306 OLED display (using the SPI protocol). The main objective is to deepen understanding of embedded systems through low-level programming, hardware interfacing, and writing custom drivers.
+This project focuses on creating a real-time temperature monitoring system using a Raspberry Pi 4. The setup involves measuring ambient temperature with a sensor (using the I2C protocol) and displaying the readings on an SSD1306 OLED display (using the SPI protocol). The main objective is to deepen understanding of embedded systems through low-level programming, hardware interfacing, and writing custom drivers and libraries.
 
 ## Goals
 - **Primary Goal**: Write custom SPI and I2C drivers in C for the Raspberry Pi 4.
