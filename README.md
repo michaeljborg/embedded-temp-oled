@@ -21,6 +21,8 @@ This project focuses on creating a real-time temperature monitoring system using
    - Communication: SPI protocol
 3. Temperature Sensor (TBD)
    - Communication: I2C protocol
+4. LCD1602 Second Display
+   - Communication: TDB
 
 ## Software Components
 - Programming Language: C
