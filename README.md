@@ -33,21 +33,9 @@ This project focuses on creating a real-time temperature monitoring system using
   - SSD1306 OLED library for handling display functionality.
 - Testing: Validate the display setup using predefined SPI libraries (e.g., spidev) before transitioning to custom drivers.
 
-## Project Structure
-```
-real-time-temp-display/
-├── src/
-│   ├── main.c               # Main program
-│   ├── spi_driver.c         # Custom SPI driver
-│   ├── i2c_driver.c         # Custom I2C driver
-│   ├── ssd1306.c            # SSD1306 library
-│   └── ssd1306.h            # Header file for SSD1306 library
-├── include/
-│   ├── spi_driver.h         # Header file for SPI driver
-│   ├── i2c_driver.h         # Header file for I2C driver
-├── README.md
-└── Makefile
-```
+## Setup
+- Write Raspberry Pi Lite OS to MicroSD
+- Install components:
 
 ## Future Enhancements
 - Implement scrolling text and small animations.
