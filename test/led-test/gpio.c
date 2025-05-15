@@ -21,15 +21,25 @@ int gpio_setup() {
 void gpio_set_output(int pin) {
     int reg = pin / 10;
     int shift = (pin % 10) * 3;
-    gpio[reg] &= ~(7 << shift);  // Clear function
-    gpio[reg] |=  (1 << shift);  // Set to output (001)
+    gpio[reg] &= ~(7 << shift);
+    gpio[reg] |=  (1 << shift); // output (001)
+}
+
+void gpio_set_input(int pin) {
+    int reg = pin / 10;
+    int shift = (pin % 10) * 3;
+    gpio[reg] &= ~(7 << shift); // input (000)
+}
+
+int gpio_read(int pin) {
+    return (gpio[13] & (1 << pin)) ? 1 : 0; // GPLEV0 = offset 13
 }
 
 void gpio_write(int pin, int value) {
-    int reg = value ? 7 : 10;  // GPSET0 = 7, GPCLR0 = 10
-    gpio[reg] = (1 << pin);
+    gpio[value ? 7 : 10] = (1 << pin); // GPSET0 = 7, GPCLR0 = 10
 }
 
-void gpio_cleanup() {
-    // Optionally unmap later
+void gpio_enable_pullup(int pin) {
+    gpio[37] = (1 << pin);  // GPPUPPDN0/1, offset 37 = GPIO 0–15, 38 = 16–31
+    gpio[38] = (1 << pin);  // Use 38 for GPIO17 and GPIO18
 }
